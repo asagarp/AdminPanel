@@ -81,7 +81,6 @@ body {
 article {
     flex-grow: 1;
     border-left: 1px solid #aca1a1;
-    padding: 20px;
 }
 
 .patient {
