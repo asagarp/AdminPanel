@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <title>Admin Panel</title>
 </head>
@@ -26,7 +26,7 @@
             </div>
             <div>
                 <ul>
-                    <li><p><a href="./index.html">Dashboard</a></p></li>
+                    <li><p><a href="./dashboard.html">Dashboard</a></p></li>
                     <li><a href="../doctor/doctor.html">Doctor</a></li>
                     <li><a href="../patient/patient.html">Patient</a></li>
             </ul>
@@ -41,15 +41,15 @@
             <div class="total">
                 <div class="Doctor">
                     <h1>Total Doctors:</h1>
-                    <span></span>
+                    <span id="totalDoctor"></span>
                 </div>
                 <div class="Patient">
                     <h1>Total Patients:</h1>
-                    <span></span>
+                    <span id="totalPatient"></span>
                 </div>
             </div>    
         </article>
     </div>
-    
+    <script src="./dashboard.js"></script>
 </body>
 </html>

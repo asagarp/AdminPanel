@@ -26,7 +26,7 @@
             </div>
             <div>
                 <ul>
-                    <li><a href="../index/index.html">Dashboard</a></li>
+                    <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
                     <li><a href="../doctor/doctor.html">Doctor</a></li>
                     <li><p><a href="../patient/patient.html">Patient</a></p></li>
                 </ul>
@@ -36,20 +36,21 @@
 
     <article>
         <div class="patient">
-            <button><i class="fa-solid fa-arrow-left">&nbsp; &nbsp;<a href="http://127.0.0.1:5501/index.html">Back</a></i></button>
+            <button><i class="fa-solid fa-arrow-left">&nbsp; &nbsp;<a href="../dashboard/dashboard.html">Back</a></i></button>
             <h3>Manage Patients</h3>
         </div>
         <div class="table">
         <div class="listPatient">
             <h3>All Patients </h3>
         </div>
-        <table id="doctors-table">
+        <table id="patientTable">
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Contact</th>
                     <th>Email</th>
-                    <th>Date of Birth</th>
+                    <th>gender</th>
+                    <th>Contact</th>
+                    <th>DateofBirth</th>
                 </tr>
             </thead>
             <tbody>
@@ -59,5 +60,6 @@
     </div>
     </article>
 </div>
+<script src="./patient.js"></script>
 </body>
 </html>

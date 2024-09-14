@@ -26,7 +26,7 @@
             </div>
             <div>
                 <ul>
-                    <li><a href="../index/index.html">Dashboard</a></li>
+                    <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
                     <li><p><a href="../doctor/doctor.html">Doctor</a></p></li>
                     <li><a href="../patient/patient.html">Patient</a></li>
                 </ul>
@@ -36,14 +36,14 @@
 
     <article>
         <div class="manageDoctor">
-            <button><i class="fa-solid fa-arrow-left">&nbsp; &nbsp;<a href="http://127.0.0.1:5501/index.html">Back</a></i></button>
+            <button><i class="fa-solid fa-arrow-left">&nbsp; &nbsp;<a href="../dashboard/dashboard.html">Back</a></i></button>
             <h3>Manage Doctors</h3>
         </div>
         
         <div class="addDoctor">
             <form id="add-doctor-form">
                 <h3>Add Doctor</h3>
-                <label for="doctor-name">Name:</label>
+                <label for="doctor-name">DoctorName:</label>
                 <input type="text" id="doctor-name" name="doctor-name" required>
 
                 <label for="doctor-email">Email:</label>
@@ -57,19 +57,12 @@
 
                 <label for="doctor-gender">Gender:</label>
                 <input type="text" id="doctor-gender" name="doctor-gender" required>
-<!-- 
-              // <div class="Gender">
-                <label for="doctor-gender">Gender:</label>
-                
-                <label for="male">Male</label>
-                <input type="radio" id="male" name="male" value="Male" required>
 
-                <label for="female">Female</label>
-                <input type="radio" id="female" value="Female" required>
-               </div> -->
+                <label for="doctor-specialty">Speciality:</label>
+                <input type="text" id="doctor-speciality" name="doctor-speciality" required>
 
-                <label for="doctor-specialty">Specialty:</label>
-                <input type="text" id="doctor-specialty" name="doctor-specialty" required>
+                <label for="doctor-fees">Fees:</label>
+                <input type="text" id="doctor-fees" name="doctor-fees" required>
 
                 
 
@@ -88,7 +81,8 @@
                         <th>Contact</th>
                         <th>Gender</th>
                         <th>Specialty</th>
-                        <!-- <th>Actions</th> -->
+                        <th>Fees</th>
+                        <th>CreatedAt</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -98,5 +92,6 @@
         </div>
     </article>
 </div>
+<script src="./doctor.js"></script>
 </body>
 </html>
