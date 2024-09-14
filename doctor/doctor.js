@@ -4,14 +4,14 @@ document.getElementById('add-doctor-form').addEventListener('submit', async (eve
     const data = {
         DoctorName: document.getElementById('doctor-name').value,
         Email: document.getElementById('doctor-email').value,
-        Password: document.getElementById('doctor-password').value,
         Contact: document.getElementById('doctor-contact').value,
-        Gender: document.getElementById('doctor-gender').value,
         Speciality: document.getElementById('doctor-speciality').value,
-        Fees: document.getElementById('doctor-fees').value
+        Fees: document.getElementById('doctor-fees').value,
+        Date: document.getElementById('doctor-date').value,
+        Time: document.getElementById('doctor-time').value,
+        status: document.getElementById('doctor-status').value
     };
 
-    const CreatedAt = new Date().toDateString();
     let table = document.getElementById('doctors-table');
 
     // Check if the doctor already exists in the table based on the email
@@ -39,15 +39,17 @@ document.getElementById('add-doctor-form').addEventListener('submit', async (eve
     let cell6 = newRow.insertCell(5);
     let cell7 = newRow.insertCell(6);
     let cell8 = newRow.insertCell(7);
+ 
 
     cell1.innerHTML = data.DoctorName;
     cell2.innerHTML = data.Email;
-    cell3.innerHTML = data.Password;
-    cell4.innerHTML = data.Contact;
-    cell5.innerHTML = data.Gender;
-    cell6.innerHTML = data.Speciality;
-    cell7.innerHTML = data.Fees;
-    cell8.innerHTML = CreatedAt;
+    cell3.innerHTML = data.Contact;
+    cell4.innerHTML = data.Speciality;
+    cell5.innerHTML = data.Fees;
+    cell6.innerHTML = data.Date;
+    cell7.innerHTML = data.Time;
+    cell8.innerHTML = data.status;
+  
 
     const URL = 'http://localhost:3000/api/medplus/admin/home/addDoctor';
 

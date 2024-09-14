@@ -1,97 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="doctor.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <title>Doctor</title>
 </head>
+
 <body>
     <div class="container">
         <div class="administrator">
             <div class="navigation">
-            <div class="arko">
-            <img class="image" src="../kaoleeの記事｜ウエディングパークマガジン.jpg" alt="admin">
-            <h3>Administrator</h3>
-            <p class="updateEmail">admin@sagar.com</p><br>
-            <button class="logoutButton"><a href="../login/login.html">Log out</a></button>
+                <div class="arko">
+                    <img class="image" src="../kaoleeの記事｜ウエディングパークマガジン.jpg" alt="admin">
+                    <h3>Administrator</h3>
+                    <p class="updateEmail">admin@sagar.com</p><br>
+                    <button class="logoutButton"><a href="../login/login.html">Log out</a></button>
+                </div>
+            </div>
+            <div class="nav">
+                <div>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <i class="fa-solid fa-notes-medical"></i>
+                    <i class="fa-solid fa-hospital-user"></i>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
+                        <li>
+                            <p><a href="../doctor/doctor.html">Doctor</a></p>
+                        </li>
+                        <li><a href="../patient/patient.html">Patient</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="nav">
-            <div>
-            <i class="fa-solid fa-chart-line"></i>
-            <i class="fa-solid fa-notes-medical"></i>
-            <i class="fa-solid fa-hospital-user"></i>
+
+        <article>
+            <div class="manageDoctor">
+                <button><i class="fa-solid fa-arrow-left">&nbsp; &nbsp;<a
+                            href="../dashboard/dashboard.html">Back</a></i></button>
+                <h3>Manage Doctors</h3>
             </div>
-            <div>
-                <ul>
-                    <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
-                    <li><p><a href="../doctor/doctor.html">Doctor</a></p></li>
-                    <li><a href="../patient/patient.html">Patient</a></li>
-                </ul>
+
+            <div class="addDoctor">
+                <form id="add-doctor-form">
+                    <h3>Add Doctor</h3>
+                    <label for="doctor-name">DoctorName:</label>
+                    <input type="text" id="doctor-name" name="doctor-name" required>
+
+                    <label for="doctor-email">Email:</label>
+                    <input type="email" id="doctor-email" name="doctor-email" required>
+
+                    <label for="doctor-contact">Contact:</label>
+                    <input type="text" id="doctor-contact" name="doctor-contact" required>
+
+                    <label for="doctor-specialty">Speciality:</label>
+                    <input type="text" id="doctor-speciality" name="doctor-speciality" required>
+
+                    <label for="doctor-fees">Fees:</label>
+                    <input type="text" id="doctor-fees" name="doctor-fees" required>
+
+                    <label for="doctor-date">Date:</label>
+                    <input type="text" id="doctor-date" name="doctor-date" required>
+
+                    <label for="doctor-time">Time:</label>
+                    <input type="text" id="doctor-time" name="doctor-time" required>
+
+                    <label for="doctor-status">status:</label>
+                    <input type="text" id="doctor-status" name="doctor-fees" required>
+
+
+
+                    <button type="submit">Add Doctor</button>
+                </form>
+
+                <div class="listDoctor">
+                    <h3>All Doctors</h3>
+                </div>
+                <table id="doctors-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Contact</th>
+                            <th>Specialty</th>
+                            <th>Fees</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>status</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
             </div>
-        </div>
+        </article>
     </div>
-
-    <article>
-        <div class="manageDoctor">
-            <button><i class="fa-solid fa-arrow-left">&nbsp; &nbsp;<a href="../dashboard/dashboard.html">Back</a></i></button>
-            <h3>Manage Doctors</h3>
-        </div>
-        
-        <div class="addDoctor">
-            <form id="add-doctor-form">
-                <h3>Add Doctor</h3>
-                <label for="doctor-name">DoctorName:</label>
-                <input type="text" id="doctor-name" name="doctor-name" required>
-
-                <label for="doctor-email">Email:</label>
-                <input type="email" id="doctor-email" name="doctor-email" required>
-
-                <label for="doctor-password">Password:</label>
-                <input type="password" id="doctor-password" name="doctor-password" required>
-
-                <label for="doctor-contact">Contact:</label>
-                <input type="text" id="doctor-contact" name="doctor-contact" required>
-
-                <label for="doctor-gender">Gender:</label>
-                <input type="text" id="doctor-gender" name="doctor-gender" required>
-
-                <label for="doctor-specialty">Speciality:</label>
-                <input type="text" id="doctor-speciality" name="doctor-speciality" required>
-
-                <label for="doctor-fees">Fees:</label>
-                <input type="text" id="doctor-fees" name="doctor-fees" required>
-
-                
-
-                <button type="submit">Add Doctor</button>
-            </form>
-
-            <div class="listDoctor">
-                <h3>All Doctors</h3>
-            </div>
-            <table id="doctors-table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Password</th>
-                        <th>Contact</th>
-                        <th>Gender</th>
-                        <th>Specialty</th>
-                        <th>Fees</th>
-                        <th>CreatedAt</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                </tbody>
-            </table>
-        </div>
-    </article>
-</div>
-<script src="./doctor.js"></script>
+    <script src="./doctor.js"></script>
 </body>
+
 </html>
